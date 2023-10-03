@@ -1,13 +1,437 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+* {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+    color: #333;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    background-color: #f7f8fa;
 }
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.navbar h1 {
+    color: #f1356d;
+}
+
+.navbar .links {
+    margin-left: auto;
+}
+
+.navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+}
+
+.navbar a:hover {
+    color: #f1356d;
+}
+
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pizza-list, .side-list, .beverage-list {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+}
+
+.pizza-list h2, .side-list h2, .beverage-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f1356d;
+    border-bottom: 2px solid #f1356d;
+    display: inline-block;
+}
+
+.folder-button, .pizza-preview, .side-preview, .beverage-preview {
+    position: relative;
+    z-index: 3;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;                /* Add flex for alignment */
+    align-items: center;          /* Vertically align content */
+    gap: 10px;                    /* Space between image and details */
+}
+
+.pizza-preview img, .side-preview img, .beverage-preview img {
+    width: 80px;                 /* Set image width */
+    height: 80px;                /* Set image height */
+    object-fit: cover;           /* Ensure the image scales correctly */
+    border-radius: 10px;         /* Optional: rounded corners */
+}
+
+
+.folder-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #f1356d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+
+}
+
+.folder-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pizza-preview, .side-preview, .beverage-preview {
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.pizza-preview:hover, .side-preview:hover, .beverage-preview:hover {
+    background-color: #eaecef;
+}
+
+.pizza-preview h2, .side-preview h2, .beverage-preview h2 {
+    font-size: 20px;
+    color: #f1365d;
+    margin-bottom: 8px;
+}
+
+.pizza-preview a, .side-preview a, .beverage-preview a {
+    text-decoration: none;
+    display: block;
+}
+
+/* Add some visual flair to your items */
+.pizza-preview::before, .side-preview::before, .beverage-preview::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #f1356d;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.dropdown-container {
+  overflow-y: auto;  
+  max-height: 300px; 
+}
+
+/* Styling the scrollbar */
+.dropdown-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown-container::-webkit-scrollbar-thumb {
+  background-color: #f1356d;
+  border-radius: 4px;
+}
+
+.dropdown-container::-webkit-scrollbar-track {
+  background-color: #f8f9fd;
+}
+
+.pizzaSlice::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--cheese-stretch, 100%);
+    background-color: #ffff99; /* Cheese color */
+    clip-path: polygon(100% 100%, 0% 100%, 50% 0%);
+}
+
+.pizza-details {
+    font-family: 'YourFontFamily'; /* Match with homepage */
+    color: #333; /* Dark gray, or whatever your main text color is */
+}
+
+.header-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.diet-description,
+.pizza-description {
+    margin-bottom: 1rem;
+}
+
+.base-selection {
+    margin-bottom: 1rem;
+}
+
+.price-section {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.checkout-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button.active {
+    background-color: #f1356d;
+    color: white;
+}
+
+.checkout-button.inactive {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.warning-text {
+    color: red;
+    margin-top: 1rem;
+}
+.base-button,
+.size-button {
+    padding: 8px 12px;
+    margin-right: 8px;
+    margin-bottom: 20;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+}
+
+.base-button.selected,
+.size-button.selected {
+    background-color: #f1356d; /* or any other color you like */
+    color: white;
+}
+
+.base-button:not(.selected):hover,
+.size-button:not(.selected):hover {
+    background-color: #f1356d; /* light gray for hover effect */
+}
+
+
+.toppings-folder {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.toppings-dropdown {
+    max-height: 150px;  /* adjust as needed */
+    overflow-y: scroll;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.topping-button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.topping-button.selected {
+    background-color: #007BFF;
+    color: white;
+}
+
+.topping-button:not(.selected):hover {
+    background-color: #f0f0f0;
+}
+.topping-list {
+    margin-top: 20px;
+}
+
+.selection-heading h3 {
+    margin-bottom: 4px;
+}
+/* Add this CSS to your stylesheets */
+.checkout {
+    text-align: center;
+}
+
+.order-item {
+    border: 1px solid #f1356d;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-item h3 {
+    color: #f1356d;
+}
+
+.order-item p {
+    margin: 8px 0;
+}
+
+.order-item button {
+    background-color: #f1356d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    outline: none; /* Remove the border outline */
+}
+
+.order-item button:hover {
+    background-color: #ff6b98; /* or any other hover color you prefer */
+}
+
+/* Add a more specific rule to override conflicting styles */
+.order-item button:focus {
+    border: none; /* Ensure no border on focus */
+    box-shadow: none; /* Ensure no box shadow on focus */
+}
+
+/* General Button Style */
+.button-group button {
+    padding: 8px 12px;
+    margin-right: 8px;
+    margin-bottom: 8px; /* updated value from '20' to '8px' for consistency */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+}
+
+.button-group button.selected {
+    background-color: #f1356d; /* Pinkish color */
+    color: white;
+}
+
+.button-group button:not(.selected):hover {
+    background-color: #f1356d; /* light pink for hover effect, same as selected state for a smooth transition */
+}
+
+/* Add a specific style for the selection groups and headings */
+.selection-group {
+    margin-bottom: 20px;
+}
+
+.selection-group h3 {
+    margin-bottom: 8px;
+    color: #f1356d; /* Pinkish color */
+}
+
+/* Additional CSS for 'create' class */
+.create {
+    padding: 20px;
+    max-width: 600px; /* or your desired width */
+    margin: 0 auto;
+}
+
+/* Additional form styling if needed */
+.create form {
+    margin-top: 20px;
+}
+.selection-group button {
+    display: inline-block; 
+    margin: 4px; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    max-width: 120px;
+}
+/* General Button Style */
+.button-group button,
+.base-button,
+.size-button {
+    padding: 10px 15px; /* Adequate padding for better appearance */
+    margin-right: 8px;
+    margin-bottom: 8px; 
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    display: inline-block; 
+    overflow: hidden; 
+    white-space: nowrap; /* Keep text in a single line */
+    text-overflow: ellipsis; /* Display ellipsis (...) when text overflows */
+    max-width: 200px; /* Limit the width to avoid overly wide buttons */
+}
+
+/* Styles for selected and hover states */
+.button-group button.selected,
+.base-button.selected,
+.size-button.selected,
+.button-group button:not(.selected):hover,
+.base-button:not(.selected):hover,
+.size-button:not(.selected):hover {
+    background-color: #f1356d; 
+    color: white;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+}
+
+.selection-group {
+    margin-bottom: 20px;
+}
+
+/* Select & Button Styling */
+select, button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+/* Selected Price Styling */
+p {
+    margin-bottom: 20px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.validation-error {
+    color: red;
+}
+

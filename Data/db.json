@@ -1,0 +1,454 @@
+{
+  "pizza": [
+    {
+      "id": 1,
+      "title": "Margherita",
+      "body": "Tomato sauce, fresh mozzarella, fresh basil, olive oil",
+      "diet": "regular",
+      "sizes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "defaultToppings": [
+        6
+      ],
+      "availableToppings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Veggie Delight",
+      "body": "Tomato sauce, vegan cheese, mushrooms, olives, bell peppers",
+      "diet": "vegan",
+      "sizes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "defaultToppings": [
+        1,
+        4,
+        5
+      ],
+      "availableToppings": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Pepperoni Passion",
+      "body": "Tomato sauce, mozzarella, double pepperoni",
+      "diet": "regular",
+      "sizes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "defaultToppings": [
+        2
+      ],
+      "availableToppings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Vegan Tropical",
+      "body": "Tomato sauce, vegan cheese, pineapple",
+      "diet": "vegan",
+      "sizes": [
+        1,
+        2,
+        3
+      ],
+      "defaultToppings": [
+        6
+      ],
+      "availableToppings": [
+        1,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Hawaiian",
+      "body": "Tomato sauce, mozzarella, ham, pineapple",
+      "diet": "regular",
+      "sizes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "defaultToppings": [
+        2,
+        6
+      ],
+      "availableToppings": [
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Vegan Mediterranean",
+      "body": "Tomato sauce, vegan cheese, olives, onions",
+      "diet": "vegan",
+      "sizes": [
+        1,
+        2,
+        3
+      ],
+      "defaultToppings": [
+        4,
+        5
+      ],
+      "availableToppings": [
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Cheese Lovers",
+      "body": "Double mozzarella, cheddar, parmesan",
+      "diet": "regular",
+      "sizes": [
+        1,
+        2,
+        3
+      ],
+      "defaultToppings": [],
+      "availableToppings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Gluten-Free Veggie",
+      "body": "Tomato sauce, mozzarella, bell peppers, olives, mushrooms",
+      "diet": "gluten-free",
+      "sizes": [
+        1,
+        2
+      ],
+      "defaultToppings": [
+        1,
+        3,
+        4
+      ],
+      "availableToppings": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Gluten-Free Pepperoni",
+      "body": "Tomato sauce, mozzarella, pepperoni",
+      "diet": "gluten-free",
+      "sizes": [
+        1,
+        2
+      ],
+      "defaultToppings": [
+        2
+      ],
+      "availableToppings": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Vegan Green",
+      "body": "Pesto sauce, vegan cheese, spinach, bell peppers",
+      "diet": "vegan",
+      "sizes": [
+        1,
+        2,
+        3
+      ],
+      "defaultToppings": [
+        3
+      ],
+      "availableToppings": [
+        1,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Meat Lovers",
+      "body": "Tomato sauce, mozzarella, ham, pepperoni, sausage",
+      "diet": "regular",
+      "sizes": [
+        2,
+        3,
+        4
+      ],
+      "defaultToppings": [
+        2
+      ],
+      "availableToppings": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Vegan Spicy",
+      "body": "Tomato sauce, vegan cheese, jalapeños, onions",
+      "diet": "vegan",
+      "sizes": [
+        2,
+        3
+      ],
+      "defaultToppings": [
+        5
+      ],
+      "availableToppings": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Classic Italian",
+      "body": "Tomato sauce, mozzarella, olives, ham",
+      "diet": "regular",
+      "sizes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "defaultToppings": [
+        4
+      ],
+      "availableToppings": [
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Vegan Pesto Delight",
+      "body": "Pesto sauce, vegan cheese, tomatoes, olives",
+      "diet": "vegan",
+      "sizes": [
+        1,
+        2,
+        3
+      ],
+      "defaultToppings": [
+        1,
+        4
+      ],
+      "availableToppings": [
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Spicy Feast",
+      "body": "Tomato sauce, mozzarella, pepperoni, jalapeños",
+      "diet": "regular",
+      "sizes": [
+        2,
+        3,
+        4
+      ],
+      "defaultToppings": [
+        2
+      ],
+      "availableToppings": [
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "sides": [
+    {
+      "id": 1,
+      "name": "Salad",
+      "description": "Freshly made salad with a mix of vegetables",
+      "price": 3.5
+    },
+    {
+      "id": 2,
+      "name": "Garlic Bread",
+      "description": "Crispy garlic bread",
+      "price": 2.99
+    },
+    {
+      "id": 3,
+      "name": "Cheesy Garlic Bread",
+      "description": "Garlic bread topped with melted cheese",
+      "price": 3.99
+    },
+    {
+      "id": 4,
+      "name": "Coleslaw",
+      "description": "Creamy coleslaw salad",
+      "price": 2.5
+    },
+    {
+      "id": 5,
+      "name": "Chicken Wings",
+      "description": "Spicy chicken wings",
+      "price": 4.99
+    }
+  ],
+  "sizes": [
+    {
+      "id": 1,
+      "size": "Small (8\")",
+      "price": 6.99
+    },
+    {
+      "id": 2,
+      "size": "Medium (12\")",
+      "price": 9.99
+    },
+    {
+      "id": 3,
+      "size": "Large (16\")",
+      "price": 12.99
+    },
+    {
+      "id": 4,
+      "size": "Pizzanormous (20\")",
+      "price": 15.99
+    }
+  ],
+  "toppings": [
+    {
+      "id": 1,
+      "name": "Mushrooms"
+    },
+    {
+      "id": 2,
+      "name": "Pepperoni"
+    },
+    {
+      "id": 3,
+      "name": "Bell Peppers"
+    },
+    {
+      "id": 4,
+      "name": "Olives"
+    },
+    {
+      "id": 5,
+      "name": "Onions"
+    },
+    {
+      "id": 6,
+      "name": "Pineapple"
+    }
+  ],
+  "bases": [
+    {
+      "id": "1",
+      "name": "Thin Italian",
+      "additionalCost": 0
+    },
+    {
+      "id": "2",
+      "name": "Stone Crust",
+      "additionalCost": 0
+    },
+    {
+      "id": "3",
+      "name": "Cheese Stuffed Crust",
+      "additionalCost": 3
+    },
+    {
+      "id": "4",
+      "name": "Vegan",
+      "additionalCost": 1.5
+    },
+    {
+      "id": "5",
+      "name": "Gluten Free",
+      "additionalCost": 1.5
+    }
+  ],
+  "beverages": [
+    {
+      "id": 1,
+      "name": "1 Litre Pepsi",
+      "price": 1.99
+    },
+    {
+      "id": 2,
+      "name": "1 Litre Pepsi Max",
+      "price": 1.99
+    },
+    {
+      "id": 3,
+      "name": "1 Litre Dr Pepper",
+      "price": 2.09
+    },
+    {
+      "id": 4,
+      "name": "1 Litre 7up",
+      "price": 1.89
+    },
+    {
+      "id": 5,
+      "name": "1 Litre Tango",
+      "price": 1.89
+    }
+  ],
+  "checkout": []
+}
